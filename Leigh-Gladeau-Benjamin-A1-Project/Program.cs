@@ -35,17 +35,54 @@ namespace Leigh_Gladeau_Benjamin_A1_Project
             Console.WriteLine("\n-Type (Help the Law) for choice one. - Type (Loyalty to Gang) for choice two");
 
             //Separate ReadLine that makes it easier to acknowledge particular choices. 
-            string choice = Console.ReadLine();
-            if (choice == "Help the Law")
+            string pathOne = Console.ReadLine();
+            if (pathOne == "Help the Law")
             {
-                Console.WriteLine($"You made the right choice {name}, we should get right to business then,\nafterall time is limited.");
-                Console.WriteLine("");
+                Console.WriteLine($"Sheriff - \"You made the right choice {name}, we should get right to business then,\nafterall time is limited.\"");
+                Console.WriteLine("After a bit of time of talking the sheriff mentions a plan to catch your group and bring them all into jail.");
+                Console.WriteLine("Not wanting a long sentence, you agree that helping them will get you out of this mess and that way of life.");
+                Console.WriteLine("You go along with them, and tell them where your hideout is, but now you are left with a moral choice.");
+                Console.WriteLine("Do you go along with them to help with their arrest? or do you try and escape when you get the chance?");
 
-                if (choice == "Loyalty to Gang")
+                Console.WriteLine("\n- Type (Commit) for choice one. - Type (Escape) for choice two.");
+                string choiceTwo = Console.ReadLine();
+                if (choiceTwo == "Commit")
                 {
-                    Console.WriteLine($"well {name}, you are free to that choice.");
-                    Console.WriteLine("");
-                }
+                    Console.WriteLine();
+
+                    if (choiceTwo == "Escape") 
+                    { 
+                        Console.WriteLine(); 
+                    }
+                   else
+                    {
+                        Console.WriteLine();
+                    }
+
+                    if (pathOne == "Loyalty to Gang")
+                    {
+                        Console.WriteLine($"sheriff - \"well {name}, I can't say that was the choice i would have gone with.\nBut we are all free to make our own decisions.\"");
+                        Console.WriteLine("The sheriff walks out of sight and you are left with your own thoughts.");
+                        Console.WriteLine("\nNow we are going to fast foward to the court date.");
+                        Console.WriteLine("\nSheriff - \"We are here to lay the law down on this criminal that played a roll in the robbery that occured last week.\"");
+                        Console.WriteLine("");
+
+                        Console.WriteLine("- Type (Spare) for choice one. - Type (Kill) for choice two.");
+                        string paththree = Console.ReadLine();
+                        if (paththree == "Spare")
+                        {
+                            Console.WriteLine();
+
+                            if (paththree =="Kill")
+                            {
+                                Console.WriteLine();
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine();
+                        }
+                    }
             }
             //If you input a choice incorrectly they will assume you dont want either.
             else

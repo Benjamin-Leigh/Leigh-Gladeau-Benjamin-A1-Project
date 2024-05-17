@@ -1,4 +1,5 @@
-﻿using System.Net.Security;
+﻿using System.ComponentModel.Design;
+using System.Net.Security;
 
 namespace Leigh_Gladeau_Benjamin_A1_Project
 {
@@ -6,6 +7,8 @@ namespace Leigh_Gladeau_Benjamin_A1_Project
     {
         static void Main(string[] args)
         {
+            //tried my best to make the second choice work, but i didnt have much time at home to perfect it.
+            string S1 = "Loyalty to Gang";
             //Waking up
             Console.WriteLine("You wake up, sun shining through bars within the window.");
             Console.WriteLine("You sit up and look towards the wooden door with a metal window.");
@@ -48,49 +51,51 @@ namespace Leigh_Gladeau_Benjamin_A1_Project
                 string choiceTwo = Console.ReadLine();
                 if (choiceTwo == "Commit")
                 {
-                    Console.WriteLine();
+                    Console.WriteLine("Trying to turn over a new leaf, you leave your old life behind and help the law by helping them arrest your old gang.\nHaving your sentence shortened, you get out months later able to start a new life\nThe End."); 
 
-                    if (choiceTwo == "Escape") 
-                    { 
-                        Console.WriteLine(); 
+
+                    if  (choiceTwo == "Escape")
+                    {
+                        Console.WriteLine("You take your chance when getting to your hideout, and while the Sheriff and his men\nare busy busting the door down, you take that opportunity to leave, take a horse and run.\nAfter a while you believe you got away, you are safe now.\nThe End");
                     }
-                   else
+                    else
                     {
                         Console.WriteLine();
                     }
+                }
+                //second option for the first choice, and that should have had its own choices, but it didnt work, and went straight to else when i input it in correctly.
+                if (pathOne == S1)
+                {
+                    Console.WriteLine($"sheriff - \"well {name}, I can't say that was the choice i would have gone with.\nBut we are all free to make our own decisions.\"");
+                    Console.WriteLine("The sheriff walks out of sight and you are left with your own thoughts.");
+                    Console.WriteLine("\nNow we are going to fast foward to the court date.");
+                    Console.WriteLine("\nSheriff - \"We are here to lay the law down on this criminal that played a roll in the robbery that occured last week.\"");
+                    Console.WriteLine("During that moment. You see your gang wearing masks coming to your rescue. They make quick work\nof the area and take the bindings off of you.");
+                    Console.WriteLine("You are now left with another choice, what do you plan on doing with the Sheriff and his men?");
 
-                    if (pathOne == "Loyalty to Gang")
+                    Console.WriteLine("- Type (Spare) for choice one. - Type (Kill) for choice two.");
+                    string paththree = Console.ReadLine();
+                    if (paththree == "Spare")
                     {
-                        Console.WriteLine($"sheriff - \"well {name}, I can't say that was the choice i would have gone with.\nBut we are all free to make our own decisions.\"");
-                        Console.WriteLine("The sheriff walks out of sight and you are left with your own thoughts.");
-                        Console.WriteLine("\nNow we are going to fast foward to the court date.");
-                        Console.WriteLine("\nSheriff - \"We are here to lay the law down on this criminal that played a roll in the robbery that occured last week.\"");
-                        Console.WriteLine("");
+                        Console.WriteLine("Your gang holds choice as an important rule. Feeling it would do more harm than good\nYou put your gun down and decide to leave the Sheriff and his men, and leave peacefully with your gang.\nThe End");
 
-                        Console.WriteLine("- Type (Spare) for choice one. - Type (Kill) for choice two.");
-                        string paththree = Console.ReadLine();
-                        if (paththree == "Spare")
+                    if (paththree == "Kill")
                         {
-                            Console.WriteLine();
-
-                            if (paththree =="Kill")
-                            {
-                                Console.WriteLine();
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine();
+                            Console.WriteLine("After everything that happened to you, you decide that they cannot live.\nSo being back with your gang again you choose to end the sheriff and his men.\nThe End");
                         }
                     }
+                    else
+                    {
+                        Console.WriteLine("Not taking any action, the Sheriff pulls out a gun and shoots you\nThe End");
+                    }
+
+                }
             }
             //If you input a choice incorrectly they will assume you dont want either.
             else
             {
                 Console.WriteLine($"unfortunately for you {name}, no one will know of your disapearance here.\nYou were never heard from again.");
             }
-            Console.WriteLine("");
-
         }
     }
 }
